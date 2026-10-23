@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Happy Birthday, My Queen Mithi • Forever & 2028 by Dr. Arannyajit</title>
+  
+  <!-- Editorial Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --pure-white: #FFFFFF;
+      --bg-porcelain: #FAF9F7;
+      --sakura-mist: #FFF5F7;
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --card-border: rgba(247, 218, 226, 0.92);
+      --blush-accent: #E56A86;
+      --blush-deep: #C44362;
+      --blush-light: #FFEBF1;
+      --blush-glow: rgba(229, 106, 134, 0.18);
+      --gold-accent: #D4AF37;
+      --gold-deep: #B38612;
+      --gold-light: #FBF4DE;
+      --text-dark: #2A2224;
+      --text-muted: #6E6165;
+      --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+      --font-poem: "Cormorant Garamond", Georgia, serif;
+      --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      min-height: 100dvh;
+      background-color: var(--bg-porcelain);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Ambient Dawn / Mt Fuji Silhouette Background */
+    .sky-bg {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 12%, #FFFFFF 0%, #FFF7F9 45%, #F7E7EC 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .fuji-backdrop {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1300px;
+      height: 42vh;
+      min-height: 250px;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.88;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .fuji-svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 -10px 24px rgba(229, 106, 134, 0.15));
+    }
+
+    /* Falling Korean Cherry Blossoms Canvas */
+    #sakuraCanvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* =======================================================
+       UPPER RIGHT CORNER: OUR JUKEBOX FLOATING DOCK
+       ======================================================= */
+    .jukebox-corner-dock {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    /* Emblem Pill Button */
+    .jukebox-emblem-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 16px 8px 10px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1.5px solid rgba(229, 106, 134, 0.4);
+      border-radius: 999px;
+      box-shadow: 0 8px 26px rgba(229, 106, 134, 0.22), 0 2px 8px rgba(0,0,0,0.04);
+      cursor: pointer;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      user-select: none;
+    }
+
+    .jukebox-emblem-pill:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(229, 106, 134, 0.32);
+      border-color: var(--blush-accent);
+    }
+
+    /* Vinyl Record Disc Animation */
+    .vinyl-disc {
+      width: 28px;
+      height: 28px;
+      background: radial-gradient(circle, #2A2022 35%, #181415 70%, #D4AF37 72%, #181415 74%);
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      animation: spinVinyl 5s linear infinite;
+    }
+
+    .vinyl-disc.paused {
+      animation-play-state: paused;
+    }
+
+    .vinyl-core {
+      width: 9px;
+      height: 9px;
+      background: var(--blush-accent);
+      border-radius: 50%;
+      border: 1.5px solid #FFFFFF;
+    }
+
+    @keyframes spinVinyl {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .jukebox-label-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .jukebox-title {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blush-deep);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      line-height: 1.1;
+    }
+
+    .jukebox-sub {
+      font-size: 0.64rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      max-width: 110px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Animated Sound Wave Equalizer */
+    .equalizer-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 2.5px;
+      height: 14px;
+      padding-left: 2px;
+    }
+
+    .eq-bar {
+      width: 2.5px;
+      background: var(--blush-accent);
+      border-radius: 999px;
+      animation: bounceEq 1s ease-in-out infinite alternate;
+    }
+
+    .eq-bar:nth-child(1) { height: 6px; animation-delay: 0.1s; }
+    .eq-bar:nth-child(2) { height: 13px; animation-delay: 0.3s; }
+    .eq-bar:nth-child(3) { height: 8px; animation-delay: 0.2s; }
+    .eq-bar:nth-child(4) { height: 11px; animation-delay: 0.4s; }
+
+    @keyframes bounceEq {
+      0% { height: 3px; }
+      100% { height: 14px; }
+    }
+
+    /* Floating Panel Modal / Card */
+    .jukebox-modal-card {
+      margin-top: 10px;
+      width: 330px;
+      max-width: calc(100vw - 32px);
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid var(--card-border);
+      border-radius: 22px;
+      padding: 14px 14px 12px;
+      box-shadow: 0 16px 45px rgba(215, 145, 160, 0.35);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      transform-origin: top right;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: none;
+    }
+
+    .jukebox-modal-card.open {
+      display: block;
+      animation: dropOpen 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes dropOpen {
+      from {
+        opacity: 0;
+        transform: scale(0.92) translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .jukebox-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(229, 106, 134, 0.25);
+    }
+
+    .juke-header-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--blush-deep);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .close-juke-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid var(--card-border);
+      background: #FFFFFF;
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .close-juke-btn:hover {
+      background: var(--blush-light);
+      color: var(--blush-deep);
+    }
+
+    .jukebox-iframe-box {
+      width: 100%;
+      min-height: 152px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #00000008;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+    }
+
+    .jukebox-iframe-box iframe {
+      width: 100%;
+      height: 152px;
+      display: block;
+      border: none;
+    }
+
+    .juke-nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding-top: 6px;
+    }
+
+    .juke-now-playing {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 170px;
+    }
+
+    .juke-buttons-group {
+      display: flex;
+      gap: 6px;
+    }
+
+    .juke-nav-btn {
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      color: var(--blush-deep);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      transition: all 0.2s;
+    }
+
+    .juke-nav-btn:hover {
+      background: var(--blush-light);
+    }
+
+    /* Page Container */
+    .app-container {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 72px 16px 64px; /* extra top padding to give room to upper right dock */
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Top Milestone Capsule Bar */
+    .top-bar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .badge-capsule {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      box-shadow: 0 4px 16px rgba(220, 160, 175, 0.16);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--blush-deep);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--blush-accent);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--blush-accent);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.5; }
+    }
+
+    .year-tag {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: linear-gradient(135deg, var(--blush-accent) 0%, var(--blush-deep) 100%);
+      padding: 7px 16px;
+      border-radius: 999px;
+      letter-spacing: 0.08em;
+      box-shadow: 0 4px 14px rgba(196, 67, 98, 0.28);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Dr. Arannyajit Signature Dedication Ribbon */
+    .curator-ribbon {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-radius: 999px;
+      box-shadow: 0 3px 12px rgba(212, 175, 55, 0.15);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: var(--gold-deep);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    /* Main Hero Greeting */
+    .hero-card {
+      width: 100%;
+      text-align: center;
+      padding: 4px 4px 10px;
+      margin-bottom: 20px;
+    }
+
+    .destined-tag {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+
+    .greeting-h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.3rem, 7.5vw, 3.6rem);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.22;
+      color: #241A1C;
+      margin-bottom: 12px;
+    }
+
+    .typewriter-pod {
+      display: inline-block;
+      color: var(--blush-deep);
+      font-style: italic;
+      border-right: 2.5px solid var(--blush-accent);
+      padding-right: 6px;
+      min-width: 90px;
+      animation: blinkCursor 0.8s infinite;
+    }
+
+    @keyframes blinkCursor {
+      0%, 100% { border-color: var(--blush-accent); }
+      50% { border-color: transparent; }
+    }
+
+    .sub-poetic {
+      font-size: clamp(0.95rem, 2.7vw, 1.08rem);
+      color: var(--text-muted);
+      max-width: 530px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    /* Real-Time Birthday Countdown to Oct 29 */
+    .countdown-card {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 26px;
+      padding: 20px 18px;
+      box-shadow: 0 12px 32px var(--blush-glow);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .countdown-header {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--blush-deep);
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .countdown-item {
+      background: #FFFFFF;
+      border: 1px solid rgba(255, 218, 226, 0.85);
+      border-radius: 18px;
+      padding: 12px 6px;
+      box-shadow: 0 4px 12px rgba(229, 106, 134, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .countdown-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--blush-accent), var(--gold-accent));
+    }
+
+    .digit-val {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      font-weight: 700;
+      color: #241A1C;
+      line-height: 1.1;
+      margin-bottom: 3px;
+    }
+
+    .digit-label {
+      font-size: 0.66rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* =======================================================
+       WORDS FOR MY QUEEN: ROTATING SHORT WISHES
+       (NO QUOTE NUMBERS, AMPLE READING TIME, PAUSE ON HOVER)
+       ======================================================= */
+    .wishes-rotator-card {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 26px;
+      padding: 24px 22px 20px;
+      box-shadow: 0 12px 35px var(--blush-glow);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .wishes-top-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed rgba(229, 106, 134, 0.25);
+    }
+
+    .wishes-tag {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--blush-deep);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .wish-viewport {
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      padding: 8px 6px;
+    }
+
+    .wish-text {
+      font-family: var(--font-poem);
+      font-size: clamp(1.25rem, 4vw, 1.55rem);
+      font-style: italic;
+      color: #2A2022;
+      line-height: 1.55;
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .wish-text.fading {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+
+    .wish-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 14px;
+      padding-top: 8px;
+    }
+
+    .reading-hint {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .wish-nav-buttons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .wish-nav-btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid var(--card-border);
+      background: #FFFFFF;
+      color: var(--blush-deep);
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .wish-nav-btn:hover {
+      background: var(--blush-light);
+      border-color: var(--blush-accent);
+    }
+
+    /* HYPER-ARTISTIC ART FRAME (PORTRAIT SECTION) */
+    .portrait-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .art-frame-wrapper {
+      position: relative;
+      background: #FFFFFF;
+      border: 8px solid #FFFFFF;
+      outline: 1.5px solid rgba(229, 106, 134, 0.35);
+      border-radius: 28px;
+      box-shadow: 0 18px 45px rgba(215, 145, 160, 0.28), 0 4px 14px rgba(0,0,0,0.04);
+      padding: 10px;
+      max-width: 440px;
+      width: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .art-frame-wrapper:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 55px rgba(215, 145, 160, 0.35);
+    }
+
+    .art-canvas-container {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: linear-gradient(155deg, #FFFFFF 0%, #FFF4F7 50%, #FDEBF0 100%);
+      border: 1px solid rgba(235, 205, 215, 0.85);
+      aspect-ratio: 4 / 4.5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .art-canvas-container svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Corner floral filigrees */
+    .corner-blossom {
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      pointer-events: none;
+      z-index: 4;
+      opacity: 0.9;
+    }
+    .corner-tl { top: 6px; left: 6px; }
+    .corner-tr { top: 6px; right: 6px; transform: scaleX(-1); }
+    .corner-bl { bottom: 6px; left: 6px; transform: scaleY(-1); }
+    .corner-br { bottom: 6px; right: 6px; transform: scale(-1); }
+
+    .portrait-caption {
+      padding: 16px 12px 10px;
+      text-align: center;
+      background: #FFFFFF;
+      width: 100%;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .caption-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--blush-deep);
+      letter-spacing: 0.02em;
+    }
+
+    .caption-sub {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+      margin-top: 3px;
+      font-weight: 600;
+    }
+
+    /* Interactive Wax-Sealed 2028 Promise Letter Card */
+    .promise-card {
+      width: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 12px 35px var(--blush-glow);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .promise-header-tag {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--gold-deep);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .promise-title {
+      font-family: var(--font-serif);
+      font-size: 1.48rem;
+      color: #241A1C;
+      margin-bottom: 16px;
+    }
+
+    .envelope-box {
+      background: #FFFFFF;
+      border: 1.5px solid rgba(229, 106, 134, 0.35);
+      border-radius: 20px;
+      padding: 22px 18px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(229, 106, 134, 0.08);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .envelope-box:hover {
+      border-color: var(--blush-accent);
+      transform: translateY(-2px);
+    }
+
+    .wax-seal {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, #D4AF37 0%, #AA820A 100%);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 12px rgba(170, 130, 10, 0.35);
+      transition: transform 0.3s ease;
+    }
+
+    .wax-seal:hover {
+      transform: scale(1.08) rotate(5deg);
+    }
+
+    .envelope-hint {
+      font-size: 0.8rem;
+      color: var(--blush-deep);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .letter-contents {
+      display: none;
+      text-align: left;
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px dashed rgba(229, 106, 134, 0.3);
+      font-family: var(--font-poem);
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: #2E2527;
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    .letter-contents.revealed {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Floating Heart Tap Effect */
+    .heart-tap {
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      animation: floatUpFade 1.25s forwards ease-out;
+      font-size: 22px;
+    }
+
+    @keyframes floatUpFade {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
+      }
+      50% {
+        opacity: 0.95;
+        transform: translate(-50%, -90px) scale(1.3) rotate(-12deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -170px) scale(1.6) rotate(16deg);
+      }
+    }
+
+    /* Celebratory Action Button */
+    .burst-action-bar {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 8px;
+      margin-bottom: 24px;
+    }
+
+    .heart-blast-btn {
+      background: linear-gradient(135deg, var(--blush-accent), var(--blush-deep));
+      color: #FFFFFF;
+      border: none;
+      padding: 13px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      box-shadow: 0 6px 22px rgba(196, 67, 98, 0.32);
+      transition: all 0.25s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .heart-blast-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(196, 67, 98, 0.42);
+    }
+
+    .heart-blast-btn:active {
+      transform: scale(0.97);
+    }
+
+    /* Romantic Footer */
+    .romantic-footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding-top: 14px;
+    }
+
+    .romantic-footer span {
+      color: var(--blush-deep);
+      font-weight: 700;
+    }
+
+    @media (max-width: 480px) {
+      .jukebox-corner-dock {
+        top: 12px;
+        right: 12px;
+      }
+      .jukebox-emblem-pill {
+        padding: 6px 12px 6px 8px;
+      }
+      .jukebox-modal-card {
+        width: calc(100vw - 24px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sky background -->
+  <div class="sky-bg"></div>
+
+  <!-- Mt. Fuji Silhouette Backdrop with Snowcap -->
+  <div class="fuji-backdrop">
+    <svg class="fuji-svg" viewBox="0 0 1300 420" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="fujiGrad" x1="650" y1="0" x2="650" y2="420" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+          <stop offset="28%" stop-color="#FFE7EE" stop-opacity="0.88" />
+          <stop offset="68%" stop-color="#F2C7D5" stop-opacity="0.55" />
+          <stop offset="100%" stop-color="#EAA6BC" stop-opacity="0.18" />
+        </linearGradient>
+        <linearGradient id="snowCap" x1="650" y1="20" x2="650" y2="180" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.98"/>
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <!-- Base Mountain Slope -->
+      <path d="M0,420 L350,330 L550,135 Q650,85 750,135 L950,330 L1300,420 Z" fill="url(#fujiGrad)"/>
+      <!-- Snowcap peak -->
+      <path d="M550,135 Q650,85 750,135 C720,165 690,150 670,172 C645,148 615,165 585,152 Z" fill="url(#snowCap)"/>
+    </svg>
+  </div>
+
+  <!-- Falling Korean Cherry Blossoms Canvas -->
+  <canvas id="sakuraCanvas"></canvas>
+
+  <!-- =======================================================
+       UPPER RIGHT CORNER: OUR JUKEBOX 🎵 (5 TRACKS WITH MINI VINYL)
+       ======================================================= -->
+  <aside class="jukebox-corner-dock">
+    <!-- Glowing Jukebox Emblem Pill -->
+    <div class="jukebox-emblem-pill" id="jukeboxPillTrigger" title="Click to open Our Jukebox">
+      <div class="vinyl-disc" id="vinylDisc">
+        <div class="vinyl-core"></div>
+      </div>
+      <div class="jukebox-label-group">
+        <span class="jukebox-title">Our Jukebox 🎵</span>
+        <span class="jukebox-sub" id="jukeMiniTrackTitle">Please Don't Change</span>
+      </div>
+      <div class="equalizer-bars">
+        <span class="eq-bar"></span>
+        <span class="eq-bar"></span>
+        <span class="eq-bar"></span>
+        <span class="eq-bar"></span>
+      </div>
+    </div>
+
+    <!-- Dropdown Interactive Player Modal -->
+    <div class="jukebox-modal-card" id="jukeboxModal">
+      <div class="jukebox-modal-header">
+        <div class="juke-header-left">
+          <span>🎧 Sacred Melody Player</span>
+        </div>
+        <button class="close-juke-btn" id="closeJukeBtn" title="Minimize Jukebox">✕</button>
+      </div>
+
+      <div class="jukebox-iframe-box">
+        <iframe 
+          id="spotifyIframe"
+          src="https://open.spotify.com/embed/track/0jY618wuln0b5b8sCxFgjk?utm_source=generator&si=0111c256a19e4ae2&autoplay=1" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="juke-nav-bar">
+        <span class="juke-now-playing" id="jukeFullTrackTitle">Please Don't Change</span>
+        <div class="juke-buttons-group">
+          <button class="juke-nav-btn" id="jukePrevBtn">‹ Prev</button>
+          <button class="juke-nav-btn" id="jukeNextBtn">Next ›</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Webpage Container -->
+  <main class="app-container">
+    
+    <!-- Top Milestone Capsule Bar -->
+    <header class="top-bar">
+      <div class="badge-capsule">
+        <span class="pulse-dot"></span>
+        <span>DESTINED FOR 2028 • MY FUTURE WIFE</span>
+      </div>
+      <div class="year-tag">
+        <span>🌸 OCTOBER 29 • QUEEN'S DAY</span>
+      </div>
+    </header>
+
+    <!-- Curator Ribbon with Dr. Arannyajit's Name -->
+    <div class="curator-ribbon">
+      <span>✦ Created with eternal devotion by Dr. Arannyajit ✦</span>
+    </div>
+
+    <!-- Hero Greeting with Dynamic Nicknames Typewriter -->
+    <section class="hero-card">
+      <span class="destined-tag">To The Forever Love of My Life</span>
+      <h1 class="greeting-h1">Happy Birthday,<br><span id="typewriterText" class="typewriter-pod">Mithi</span></h1>
+      <p class="sub-poetic">
+        Under soft Mt. Fuji dawn skies and fluttering Korean cherry blossoms, my whole world begins and ends with you.
+      </p>
+    </section>
+
+    <!-- Live Birthday Countdown to October 29 -->
+    <section class="countdown-card">
+      <div class="countdown-header" id="countdownHeading">
+        <span>⏳ Counting Down To Your Special Day • Oct 29</span>
+      </div>
+      <div class="countdown-grid">
+        <div class="countdown-item">
+          <div class="digit-val" id="cntDays">00</div>
+          <div class="digit-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="digit-val" id="cntHours">00</div>
+          <div class="digit-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="digit-val" id="cntMins">00</div>
+          <div class="digit-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="digit-val" id="cntSecs">00</div>
+          <div class="digit-label">Seconds</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Words For My Queen Section (NO QUOTE NUMBERS, AMPLE READING TIME) -->
+    <section class="wishes-rotator-card" id="wishesCard">
+      <div class="wishes-top-meta">
+        <div class="wishes-tag">
+          <span>💌 Words For My Queen</span>
+        </div>
+      </div>
+
+      <!-- Wish Viewport -->
+      <div class="wish-viewport" id="wishViewport">
+        <p class="wish-text" id="wishTextDisplay">
+          "Loving you is the quietest peace and the most breathtaking adventure."
+        </p>
+      </div>
+
+      <!-- Clean Minimal Nav Controls -->
+      <div class="wish-controls">
+        <span class="reading-hint">Hover / tap to pause reading</span>
+        <div class="wish-nav-buttons">
+          <button class="wish-nav-btn" id="prevWishBtn" title="Previous Wish">‹</button>
+          <button class="wish-nav-btn" id="nextWishBtn" title="Next Wish">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artistic Romantic Silhouette Frame -->
+    <section class="portrait-section">
+      <div class="art-frame-wrapper">
+        
+        <!-- Corner Floral Ornaments -->
+        <svg class="corner-blossom corner-tl" viewBox="0 0 100 100" fill="none">
+          <path d="M10,10 C45,10 60,40 60,60" stroke="#E56A86" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="10" fill="#FFEBF1" stroke="#E56A86" stroke-width="2"/>
+          <circle cx="55" cy="55" r="7" fill="#FFEBF1" stroke="#E56A86" stroke-width="2"/>
+          <circle cx="38" cy="18" r="5" fill="#D4AF37"/>
+        </svg>
+        <svg class="corner-blossom corner-tr" viewBox="0 0 100 100" fill="none">
+          <path d="M10,10 C45,10 60,40 60,60" stroke="#E56A86" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="10" fill="#FFEBF1" stroke="#E56A86" stroke-width="2"/>
+          <circle cx="55" cy="55" r="7" fill="#FFEBF1" stroke="#E56A86" stroke-width="2"/>
+          <circle cx="38" cy="18" r="5" fill="#D4AF37"/>
+        </svg>
+        <svg class="corner-blossom corner-bl" viewBox="0 0 100 100" fill="none">
+          <path d="M10,10 C45,10 60,40 60,60" stroke="#E56A86" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="10" fill="#FFEBF1" stroke="#E56A86" stroke-width="2"/>
+          <circle cx="55" cy="55" r="7" fill="#FFEBF1" stroke="#E56A86" stroke-width="2"/>
+          <circle cx="38" cy="18" r="5" fill="#D4AF37"/>
+        </svg>
+        <svg class="corner-blossom corner-br" viewBox="0 0 100 100" fill="none">
+          <path d="M10,10 C45,10 60,40 60,60" stroke="#E56A86" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="10" fill="#FFEBF1" stroke="#E56A86" stroke-width="2"/>
+          <circle cx="55" cy="55" r="7" fill="#FFEBF1" stroke="#E56A86" stroke-width="2"/>
+          <circle cx="38" cy="18" r="5" fill="#D4AF37"/>
+        </svg>
+
+        <div class="art-canvas-container" id="artFrameDisplay">
+          <!-- Permanent Artistic Lovers & Mt. Fuji Silhouette -->
+          <svg viewBox="0 0 400 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="artSun" cx="50%" cy="38%" r="48%">
+                <stop offset="0%" stop-color="#FFF0F4"/>
+                <stop offset="65%" stop-color="#FFE4EC"/>
+                <stop offset="100%" stop-color="#FCD5E0" stop-opacity="0.4"/>
+              </radialGradient>
+              <linearGradient id="artFuji" x1="200" y1="140" x2="200" y2="300" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+                <stop offset="35%" stop-color="#F7C4D3"/>
+                <stop offset="100%" stop-color="#EAA6BC" stop-opacity="0.5"/>
+              </linearGradient>
+            </defs>
+            
+            <!-- Radiant Background Aura -->
+            <circle cx="200" cy="190" r="145" fill="url(#artSun)"/>
+            
+            <!-- Mountain Peak in Distance -->
+            <path d="M70,300 L160,185 Q200,150 240,185 L330,300 Z" fill="url(#artFuji)"/>
+            <path d="M160,185 Q200,150 240,185 C225,200 215,192 205,205 C195,190 180,202 160,185 Z" fill="#FFFFFF" fill-opacity="0.95"/>
+
+            <!-- Flowering Cherry Tree Branch Silhouette -->
+            <path d="M30,80 Q100,70 170,120 Q210,150 250,140" stroke="#7A4C56" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M110,80 Q140,50 190,65" stroke="#7A4C56" stroke-width="2" stroke-linecap="round" fill="none"/>
+            
+            <!-- Cherry Blossoms on Branch -->
+            <circle cx="95" cy="75" r="7" fill="#FFC9D8"/>
+            <circle cx="130" cy="65" r="9" fill="#FFB8CB"/>
+            <circle cx="165" cy="100" r="8" fill="#FFAEC3"/>
+            <circle cx="195" cy="65" r="10" fill="#FFC9D8"/>
+            <circle cx="230" cy="135" r="8" fill="#FFAEC3"/>
+            <circle cx="130" cy="65" r="3" fill="#D4AF37"/>
+            <circle cx="195" cy="65" r="3" fill="#D4AF37"/>
+
+            <!-- Silhouette of Lovers Together Under Falling Sakura -->
+            <!-- The Groom / Dr. Arannyajit -->
+            <path d="M172,250 C172,238 180,230 190,230 C200,230 206,238 206,250 C206,260 198,266 189,266 C179,266 172,260 172,250 Z" fill="#42252C"/>
+            <path d="M164,272 C164,265 178,262 190,262 C202,262 214,265 214,272 L210,310 L166,310 Z" fill="#42252C"/>
+            
+            <!-- The Queen / Mithi with Flowing Dress -->
+            <path d="M208,252 C208,241 216,234 225,234 C234,234 240,241 240,252 C240,261 233,267 225,267 C216,267 208,261 208,252 Z" fill="#5E313C"/>
+            <!-- Romantic flowing gown -->
+            <path d="M206,268 C216,264 232,265 238,270 C246,282 254,302 258,310 L196,310 C200,300 203,282 206,268 Z" fill="#C44362"/>
+
+            <!-- Tiny Royal Crown on Queen -->
+            <path d="M217,233 L221,225 L225,230 L229,225 L233,233 Z" fill="#D4AF37"/>
+
+            <!-- Floating Petals Around Them -->
+            <circle cx="150" cy="220" r="4" fill="#E56A86" opacity="0.7"/>
+            <circle cx="260" cy="240" r="3.5" fill="#E56A86" opacity="0.6"/>
+            <circle cx="185" cy="180" r="4.5" fill="#E56A86" opacity="0.8"/>
+            <circle cx="225" cy="195" r="3" fill="#E56A86" opacity="0.75"/>
+
+            <!-- Editorial Signature Label Inside Canvas -->
+            <text x="200" y="355" font-family="'Playfair Display', serif" font-size="21" font-weight="600" fill="#C44362" text-anchor="middle">My Queen Mithi</text>
+            <text x="200" y="382" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" letter-spacing="3" fill="#8C6F76" text-anchor="middle">SOULMATE • DESTINED FOR 2028</text>
+            <text x="200" y="405" font-family="'Cormorant Garamond', serif" font-size="13" font-style="italic" fill="#D4AF37" text-anchor="middle">Adored by Dr. Arannyajit</text>
+          </svg>
+        </div>
+
+        <div class="portrait-caption">
+          <div class="caption-title">The One Who Holds My Heart</div>
+          <div class="caption-sub">Forever Honoring You</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Wax-Sealed 2028 Promise Letter Card -->
+    <section class="promise-card">
+      <div class="promise-header-tag">✨ SACRED VOW</div>
+      <h2 class="promise-title">A Promise For 2028</h2>
+      
+      <div class="envelope-box" id="envelopeTrigger">
+        <div class="wax-seal">2028</div>
+        <p class="envelope-hint" id="envelopeHint">Tap to break the seal and read my heart</p>
+
+        <div class="letter-contents" id="letterContents">
+          <p>
+            "My dearest <strong>Mithi</strong>, my beautiful <em>Mademoiselle</em>, my <em>Princess</em>, and forever <em>Aura-Queen</em>—
+          </p>
+          <br>
+          <p>
+            When I look at you, I do not just see the love of my youth; I see my home, my peace, and my future wife. 2028 is not merely a year on the calendar—it is our sacred horizon, where two souls intertwine into one forever sanctuary.
+          </p>
+          <br>
+          <p>
+            Until the snow on Mt. Fuji turns to cherry blossom rain, and long past eternity, I choose you every single day.
+          </p>
+          <br>
+          <p style="text-align: right; font-style: italic; color: var(--blush-deep); font-weight: 600;">
+            — Forever Devoted,<br>
+            <strong style="color: var(--gold-deep); font-family: var(--font-serif); font-size: 1.25rem;">Dr. Arannyajit</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Celebratory Action Button -->
+    <div class="burst-action-bar">
+      <button class="heart-blast-btn" id="blastLoveBtn">
+        <span>🌸 Shower Her With Blossoms & Love</span>
+      </button>
+    </div>
+
+    <!-- Romantic Footer With Doctor's Dedication -->
+    <footer class="romantic-footer">
+      Designed with eternal devotion for <span>Mithi</span> • Destined for 2028 by <span>Dr. Arannyajit</span>.
+    </footer>
+
+  </main>
+
+  <script>
+    /* =====================================================================
+       1. TYPEWRITER EFFECT: CYCLING SPECIAL PET NAMES
+       ===================================================================== */
+    const petNames = ["Mithi", "Mademoiselle", "My Queen", "My Princess", "Aura-Queen"];
+    let nameIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+    const typewriterElem = document.getElementById("typewriterText");
+
+    function runTypewriter() {
+      const currentName = petNames[nameIdx];
+
+      if (!isDeleting) {
+        charIdx++;
+        typewriterElem.textContent = currentName.substring(0, charIdx);
+        if (charIdx >= currentName.length) {
+          isDeleting = true;
+          setTimeout(runTypewriter, 1800);
+          return;
+        }
+      } else {
+        charIdx--;
+        typewriterElem.textContent = currentName.substring(0, charIdx);
+        if (charIdx <= 0) {
+          isDeleting = false;
+          nameIdx = (nameIdx + 1) % petNames.length;
+          setTimeout(runTypewriter, 350);
+          return;
+        }
+      }
+
+      const typingSpeed = isDeleting ? 60 : 120;
+      setTimeout(runTypewriter, typingSpeed);
+    }
+    runTypewriter();
+
+    /* =====================================================================
+       2. LIVE COUNTDOWN TO HER BIRTHDAY (OCTOBER 29)
+       ===================================================================== */
+    function getNextBirthdayDate() {
+      const now = new Date();
+      let targetYear = now.getFullYear();
+      let bday = new Date(targetYear, 9, 29, 0, 0, 0);
+
+      if (now.getTime() > bday.getTime() + 24 * 60 * 60 * 1000) {
+        targetYear++;
+        bday = new Date(targetYear, 9, 29, 0, 0, 0);
+      }
+      return bday;
+    }
+
+    function updateBirthdayCountdown() {
+      const now = new Date();
+      const bday = getNextBirthdayDate();
+      const diff = bday.getTime() - now.getTime();
+      const heading = document.getElementById("countdownHeading");
+
+      if (now.getMonth() === 9 && now.getDate() === 29) {
+        heading.innerHTML = "<span>🎉 HAPPY BIRTHDAY MY QUEEN! TODAY IS YOUR DAY! 🎉</span>";
+        document.getElementById("cntDays").textContent = "00";
+        document.getElementById("cntHours").textContent = "00";
+        document.getElementById("cntMins").textContent = "00";
+        document.getElementById("cntSecs").textContent = "00";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("cntDays").textContent = String(days).padStart(2, "0");
+      document.getElementById("cntHours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("cntMins").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("cntSecs").textContent = String(seconds).padStart(2, "0");
+    }
+    updateBirthdayCountdown();
+    setInterval(updateBirthdayCountdown, 1000);
+
+    /* =====================================================================
+       3. WORDS FOR MY QUEEN: AUTO-ROTATING HEART-TOUCHING WISHES
+          (NO QUOTE NUMBERS, AMPLE READING TIME, PAUSE ON HOVER/TOUCH)
+       ===================================================================== */
+    const wishes = [
+      "Loving you is the quietest peace and the most breathtaking adventure.",
+      "Happy Birthday, my Aura-Queen. Every breath you take makes this universe a softer place.",
+      "In a sea of people, my eyes will always search for you, Mademoiselle.",
+      "From this moment until 2028 and beyond, my heart will only beat to your rhythm.",
+      "To my Queen Mithi: May this year unfold like cherry blossoms after winter snow.",
+      "Every smile of yours is a prayer answered before I even whispered it.",
+      "You are not just my love—you are my sanctuary, my destiny, and my forever wife."
+    ];
+
+    let currentWishIdx = 0;
+    const wishDisplay = document.getElementById("wishTextDisplay");
+    const wishesCard = document.getElementById("wishesCard");
+
+    const WISH_INTERVAL = 8000; // 8 seconds ample reading time
+    let wishTimer = null;
+    let isPaused = false;
+
+    function renderWish(idx) {
+      wishDisplay.classList.add("fading");
+      setTimeout(() => {
+        wishDisplay.textContent = `"${wishes[idx]}"`;
+        wishDisplay.classList.remove("fading");
+      }, 300);
+    }
+
+    function scheduleNextWish() {
+      clearTimeout(wishTimer);
+      if (!isPaused) {
+        wishTimer = setTimeout(() => {
+          nextWish();
+        }, WISH_INTERVAL);
+      }
+    }
+
+    function nextWish() {
+      currentWishIdx = (currentWishIdx + 1) % wishes.length;
+      renderWish(currentWishIdx);
+      scheduleNextWish();
+    }
+
+    function prevWish() {
+      currentWishIdx = (currentWishIdx - 1 + wishes.length) % wishes.length;
+      renderWish(currentWishIdx);
+      scheduleNextWish();
+    }
+
+    // Manual controls
+    document.getElementById("nextWishBtn").addEventListener("click", nextWish);
+    document.getElementById("prevWishBtn").addEventListener("click", prevWish);
+
+    // Pause on hover
+    wishesCard.addEventListener("mouseenter", () => {
+      isPaused = true;
+      clearTimeout(wishTimer);
+    });
+
+    wishesCard.addEventListener("mouseleave", () => {
+      isPaused = false;
+      scheduleNextWish();
+    });
+
+    // Pause on touch
+    wishesCard.addEventListener("touchstart", () => {
+      isPaused = true;
+      clearTimeout(wishTimer);
+    }, { passive: true });
+
+    wishesCard.addEventListener("touchend", () => {
+      setTimeout(() => {
+        isPaused = false;
+        scheduleNextWish();
+      }, 1500);
+    }, { passive: true });
+
+    renderWish(0);
+    scheduleNextWish();
+
+    /* =====================================================================
+       4. UPPER RIGHT JUKEBOX ENGINE (5 TRACKS, FIRST = PLEASE DON'T CHANGE)
+       ===================================================================== */
+    const firstSong = {
+      title: "Please Don't Change",
+      src: "https://open.spotify.com/embed/track/0jY618wuln0b5b8sCxFgjk?utm_source=generator&si=0111c256a19e4ae2&autoplay=1"
+    };
+
+    const poolSongs = [
+      {
+        title: "Falling in Love (Track 2)",
+        src: "https://open.spotify.com/embed/track/0k0GtcnyQLMiXrdEDbLXmJ?utm_source=generator&si=ed4c7feec69b4d0e&autoplay=1"
+      },
+      {
+        title: "Eternal Devotion (Track 3)",
+        src: "https://open.spotify.com/embed/track/72IwoG8tqvIWV10IHjpNNA?utm_source=generator&si=d456e52f4d9d4110&autoplay=1"
+      },
+      {
+        title: "Golden Hour Glow (Track 4)",
+        src: "https://open.spotify.com/embed/track/65dt1vedDHPOCCPS3mVhtN?utm_source=generator&si=eb23b2b93e584300&autoplay=1"
+      },
+      {
+        title: "Seven • Days a Week (Track 5)",
+        src: "https://open.spotify.com/embed/track/7x9vdvFX21J9e9uuvf7j1r?utm_source=generator&autoplay=1"
+      }
+    ];
+
+    // Fisher-Yates shuffle algorithm for tracks 2 to 5
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    // Always keep "Please Don't Change" at index 0, followed by randomized order
+    const jukeboxPlaylist = [firstSong, ...shuffleArray(poolSongs)];
+    let currentJukeIdx = 0;
+
+    const spotifyIframe = document.getElementById("spotifyIframe");
+    const jukeMiniTrackTitle = document.getElementById("jukeMiniTrackTitle");
+    const jukeFullTrackTitle = document.getElementById("jukeFullTrackTitle");
+    const vinylDisc = document.getElementById("vinylDisc");
+    const jukeboxModal = document.getElementById("jukeboxModal");
+
+    function loadJukeboxTrack(idx) {
+      spotifyIframe.src = jukeboxPlaylist[idx].src;
+      jukeMiniTrackTitle.textContent = jukeboxPlaylist[idx].title;
+      jukeFullTrackTitle.textContent = `${idx + 1}. ${jukeboxPlaylist[idx].title}`;
+      vinylDisc.classList.remove("paused");
+    }
+
+    // Modal toggle
+    document.getElementById("jukeboxPillTrigger").addEventListener("click", () => {
+      jukeboxModal.classList.toggle("open");
+    });
+
+    document.getElementById("closeJukeBtn").addEventListener("click", () => {
+      jukeboxModal.classList.remove("open");
+    });
+
+    // Close modal when tapping outside
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".jukebox-corner-dock")) {
+        jukeboxModal.classList.remove("open");
+      }
+    });
+
+    document.getElementById("jukeNextBtn").addEventListener("click", () => {
+      currentJukeIdx = (currentJukeIdx + 1) % jukeboxPlaylist.length;
+      loadJukeboxTrack(currentJukeIdx);
+    });
+
+    document.getElementById("jukePrevBtn").addEventListener("click", () => {
+      currentJukeIdx = (currentJukeIdx - 1 + jukeboxPlaylist.length) % jukeboxPlaylist.length;
+      loadJukeboxTrack(currentJukeIdx);
+    });
+
+    // Initialize track display
+    jukeMiniTrackTitle.textContent = jukeboxPlaylist[0].title;
+    jukeFullTrackTitle.textContent = `1. ${jukeboxPlaylist[0].title}`;
+
+    /* =====================================================================
+       5. WAX-SEALED 2028 PROMISE LETTER INTERACTION
+       ===================================================================== */
+    const envelopeTrigger = document.getElementById("envelopeTrigger");
+    const letterContents = document.getElementById("letterContents");
+    const envelopeHint = document.getElementById("envelopeHint");
+
+    envelopeTrigger.addEventListener("click", () => {
+      const isOpen = letterContents.classList.contains("revealed");
+      if (isOpen) {
+        letterContents.classList.remove("revealed");
+        envelopeHint.textContent = "Tap to break the seal and read my heart";
+      } else {
+        letterContents.classList.add("revealed");
+        envelopeHint.textContent = "✦ Sealed with eternal vows for 2028 by Dr. Arannyajit ✦";
+        triggerCelebrationBurst(window.innerWidth / 2, window.innerHeight * 0.7);
+      }
+    });
+
+    /* =====================================================================
+       6. KOREAN CHERRY BLOSSOM (SAKURA) CANVAS SIMULATION
+       ===================================================================== */
+    const canvas = document.getElementById("sakuraCanvas");
+    const ctx = canvas.getContext("2d");
+
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    window.addEventListener("resize", () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const petalCount = 42;
+    const petals = [];
+
+    class BlossomPetal {
+      constructor() {
+        this.reset(true);
+      }
+
+      reset(init = false) {
+        this.x = Math.random() * width;
+        this.y = init ? Math.random() * height : -25;
+        this.size = Math.random() * 8 + 8;
+        this.speedY = Math.random() * 1.3 + 0.8;
+        this.speedX = Math.random() * 1.6 - 0.8;
+        this.angle = Math.random() * 360;
+        this.spin = Math.random() * 1.4 - 0.7;
+        this.opacity = Math.random() * 0.45 + 0.5;
+        this.color = Math.random() > 0.35 ? "#FFD6E3" : "#F7ADC2";
+      }
+
+      update() {
+        this.y += this.speedY;
+        this.x += this.speedX + Math.sin(this.angle * 0.02) * 0.6;
+        this.angle += this.spin;
+
+        if (this.y > height + 25 || this.x < -25 || this.x > width + 25) {
+          this.reset(false);
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate((this.angle * Math.PI) / 180);
+        ctx.globalAlpha = this.opacity;
+        ctx.fillStyle = this.color;
+
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.bezierCurveTo(this.size / 2, -this.size / 2, this.size, 0, this.size / 2, this.size);
+        ctx.bezierCurveTo(0, this.size * 0.85, -this.size / 2, this.size * 0.45, 0, 0);
+        ctx.fill();
+
+        ctx.restore();
+      }
+    }
+
+    for (let i = 0; i < petalCount; i++) {
+      petals.push(new BlossomPetal());
+    }
+
+    function animateBlossoms() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < petals.length; i++) {
+        petals[i].update();
+        petals[i].draw();
+      }
+      requestAnimationFrame(animateBlossoms);
+    }
+    animateBlossoms();
+
+    /* =====================================================================
+       7. FLOATING HEARTS & SPARKLES TAP INTERACTION
+       ===================================================================== */
+    const celebrationSymbols = ["💖", "🌸", "✨", "💕", "🤍", "🌷", "💍"];
+
+    function spawnFloatingHeart(x, y) {
+      const heart = document.createElement("div");
+      heart.className = "heart-tap";
+      heart.textContent = celebrationSymbols[Math.floor(Math.random() * celebrationSymbols.length)];
+      heart.style.left = `${x}px`;
+      heart.style.top = `${y}px`;
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 1250);
+    }
+
+    window.addEventListener("click", (e) => {
+      if (e.target.closest("button") || e.target.closest(".wax-seal") || e.target.closest(".jukebox-corner-dock")) {
+        return;
+      }
+      spawnFloatingHeart(e.clientX, e.clientY);
+    });
+
+    function triggerCelebrationBurst(originX, originY) {
+      for (let i = 0; i < 18; i++) {
+        setTimeout(() => {
+          const offsetX = (Math.random() - 0.5) * 220;
+          const offsetY = (Math.random() - 0.5) * 60;
+          spawnFloatingHeart(originX + offsetX, originY + offsetY);
+        }, i * 45);
+      }
+    }
+
+    document.getElementById("blastLoveBtn").addEventListener("click", (e) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      triggerCelebrationBurst(centerX, centerY);
+    });
+  </script>
+</body>
+</html>
